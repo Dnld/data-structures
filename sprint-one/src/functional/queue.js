@@ -16,9 +16,8 @@ var Queue = function(){
 
   someInstance.dequeue = function(){
     if (count) {
-      var dequeued = storage[last - count + 1];
       count--;
-      return dequeued;
+      return storage[last - count];
     }
   };
 
