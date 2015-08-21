@@ -5,15 +5,7 @@ var Stack = function() {
   instance.count = 0;
   instance.storage = {};
 
-  var extend = function(obj) {
-    for (var key in obj) {
-      instance[key] = obj[key];
-    }
-  };
-
-  extend(stackMethods);
-
-  // console.log(count);
+  _.extend(instance, stackMethods);
 
   return instance;
 };

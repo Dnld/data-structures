@@ -6,13 +6,8 @@ var Queue = function(){
   instance.last = 0;
   instance.storage = {};
   
-  var extend = function(obj) {
-    for (var key in obj) {
-      instance[key] = obj[key];
-    }
-  };
+  _.extend(instance, queueMethods);
   
-  extend(queueMethods);
   return instance;
 };
 
