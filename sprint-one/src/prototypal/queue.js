@@ -17,7 +17,9 @@ var queueMethods = {
   dequeue: function() {
     if (this.count) {
       this.count--;
-      return this.storage[this.last - this.count];
+      var dequeued = this.storage[this.last - this.count];
+      delete this.storage[this.last - this.count];
+      return dequeued;
     }
   },
   size: function() {

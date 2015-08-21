@@ -13,6 +13,7 @@ Stack.prototype = {
   pop: function() {
     if (this.count) {
       var popped = this.storage[this.count];
+      delete this.storage[this.count];
       this.count--;
       return popped;
     }
